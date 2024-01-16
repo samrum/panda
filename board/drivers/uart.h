@@ -69,6 +69,7 @@ uart_ring *get_ring_by_number(int a) {
 }
 
 // ************************* Low-level buffer functions *************************
+// cppcheck-suppress [misra-c2012-21.2]
 bool getc(uart_ring *q, char *elem) {
   bool ret = false;
 
@@ -105,6 +106,7 @@ bool injectc(uart_ring *q, char elem) {
   return ret;
 }
 
+// cppcheck-suppress [misra-c2012-21.2]
 bool putc(uart_ring *q, char elem) {
   bool ret = false;
   uint16_t next_w_ptr;
