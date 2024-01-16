@@ -224,10 +224,10 @@ void update_addr_timestamp(RxCheck addr_list[], int index) {
 
 bool rx_msg_safety_check(CANPacket_t *to_push,
                        const safety_config *cfg,
-                       const get_checksum_t get_checksum,
-                       const compute_checksum_t compute_checksum,
-                       const get_counter_t get_counter,
-                       const get_quality_flag_valid_t get_quality_flag_valid) {
+                       get_checksum_t get_checksum,
+                       compute_checksum_t compute_checksum,
+                       get_counter_t get_counter,
+                       get_quality_flag_valid_t get_quality_flag_valid) {
 
   int index = get_addr_check_index(to_push, cfg->rx_checks, cfg->rx_checks_len);
   update_addr_timestamp(cfg->rx_checks, index);

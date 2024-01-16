@@ -175,11 +175,11 @@ void update_counter(RxCheck addr_list[], int index, uint8_t counter);
 void update_addr_timestamp(RxCheck addr_list[], int index);
 bool is_msg_valid(RxCheck addr_list[], int index);
 bool rx_msg_safety_check(CANPacket_t *to_push,
-                         const safety_config *rx_checks,
-                         const get_checksum_t get_checksum,
-                         const compute_checksum_t compute_checksum,
-                         const get_counter_t get_counter,
-                         const get_quality_flag_valid_t get_quality_flag);
+                         const safety_config *cfg,
+                         get_checksum_t get_checksum,
+                         compute_checksum_t compute_checksum,
+                         get_counter_t get_counter,
+                         get_quality_flag_valid_t get_quality_flag_valid);
 void generic_rx_checks(bool stock_ecu_detected);
 void relay_malfunction_set(void);
 void relay_malfunction_reset(void);
